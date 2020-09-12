@@ -39,11 +39,11 @@
 \usepackage{latexsym}
 \usepackage{dsfont}
 
-% Encabezado / Pie de página
+% Titulo / Autor
 
 
-\title{Tarea 1 - MAT279 Optimización No Lineal}
-\author{Bruno Martinez Barrera}
+\title{Tarea X - MATXXX Nombre del Ramo}
+\author{test}
 
 % Comandos 
 
@@ -71,11 +71,27 @@
 \newcommand{\funcion}[3] {#1: #2 \rightarrow #3}
 \newcommand{\talque}{\text{ tal que }}
 
-\newenvironment{demostracion}{%
+\newenvironment{funcionporpartes}[1]{
+    \left\{
+    \begin{array}{#1}
+        }
+        {
+    \end{array}
+    \right.
+    }
+    
+\newenvironment{enunciado}{
+    \begin{minipage}{\linewidth}
+        \itshape}
+        {
+     \end{minipage}
+    }
+    
+\newenvironment{demostracion}{
     \begin{minipage}[t]{0.120\linewidth}
     \textsc{Solución.}
     \end{minipage}
-    \begin{minipage}[t]{0.825\linewidth}
+    \begin{minipage}[t]{0.880\linewidth}
         }
         {
      \end{minipage}
@@ -97,7 +113,7 @@
 \vspace{1em}
 
 \begin{tabular}{llcll}
-    \textsc{Nombre} & Bruno Martinez Barrera & \hspace{30mm} & \textsc{Rol} & 2016 10 007 - 5\\
+    \textsc{Nombre} &  & \hspace{30mm} & \textsc{Rol} & \\
     \textsc{Profesor} &  & \hspace{30mm} & \textsc{Fecha} & \today\\
     \textsc{Ayudante} & \\
 \end{tabular}

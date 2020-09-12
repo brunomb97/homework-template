@@ -1,19 +1,20 @@
 \documentclass[../template.tex]{subfiles}
 \begin{document}
+    \begin{enunciado}
     Una funcion $\funcion{f}{X}{\ol{\real}}$ es medible si y solo si, los conjuntos
         \begin{align}
             A := \llave{x \in X : f(x) = + \infty} \text{ y } B := \llave{x \in X : f(x) = - \infty}
         \end{align}
     pertenecen a $\mathcal{A}$ y la función con valores reales dada por
         \begin{align}
-            \tilde{f}(x) = \left\{ 
-                \begin{array}{ll} 
-                    f(x) & \text{ si } x \not\in A \union B \\ 
-                    0 & \text{ si } x \in A \union B 
-                \end{array} \right.
+            \tilde{f}(x) = \begin{funcionporpartes}{ll}
+                                f(x) & \text{ si } x \not\in A \union B,\\
+                                0 & \text{ si } x \in A \union B,
+                           \end{funcionporpartes}
         \end{align}
     es medible.
-    
+    \end{enunciado}
+
     \begin{demostracion}
         Se tiene
             \begin{align}
