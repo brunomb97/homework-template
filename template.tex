@@ -1,0 +1,117 @@
+\documentclass[a4paper,10pt]{article}
+\usepackage[utf8]{inputenc}
+
+\topmargin = 1.5cm                      
+\headheight = 0.5cm                     
+\headsep = 0.5cm                        
+\footskip = 0.8cm                      
+\setlength{\parindent}{.6cm}           
+\linespread{1.04}                        
+\textwidth = 16.2cm                     
+\textheight = 23.5cm                    
+\hoffset = -3.2cm                      
+\voffset = -2.54cm                     
+\evensidemargin = 3cm                 
+\oddsidemargin = 3.0cm              
+
+\usepackage{parskip}
+
+\usepackage[brazil,spanish]{babel}           
+\usepackage[utf8]{inputenc}
+
+\usepackage{changepage}
+\usepackage[usenames]{color}
+\usepackage{graphicx}
+\usepackage{graphics}
+\usepackage{subfiles}
+\usepackage{array}
+\usepackage{enumitem}
+\usepackage{multirow}
+
+\usepackage{amsmath}
+\usepackage{mathrsfs}
+\usepackage{amsfonts}
+\usepackage{mathtools}
+\usepackage{amsthm}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amstext}
+\usepackage{latexsym}
+\usepackage{dsfont}
+
+% Encabezado / Pie de página
+
+
+\title{Tarea 1 - MAT279 Optimización No Lineal}
+\author{Bruno Martinez Barrera}
+
+% Comandos 
+
+\newcommand{\real}{\mathbb{R}} % Números Reales
+\newcommand{\complejo}{\mathbb{C}} % Números Complejos
+\newcommand{\lineal}[2]{\mathcal{L} ( #1,#2 ) } % Espacio de las lineales
+
+\newcommand{\interno}[1] {\left\langle #1 \right\rangle} % Producto Interno
+\newcommand{\norma}[2][] {\left\Vert #2 \right\Vert_{#1}} % Norma
+\newcommand{\abs}[1] {\left\vert #1 \right\vert} % Absoluto
+
+\newcommand{\pare}[1] {\left( #1 \right)} % Paréntesis
+\newcommand{\llave}[1] {\left\lbrace #1 \right\rbrace} % Llaves curvas
+\newcommand{\cuadro}[1] {\left[ #1 \right]} % Llaves cuadradas
+
+\newcommand{\ssi}{\ \Leftrightarrow\ } % Sí y solo sí
+\newcommand{\implica}{\ \Rightarrow\ } % Implicancia
+\newcommand{\tiende}{\rightarrow} % Tiende a
+\newcommand{\oo}{\ \vee\ } % ó
+\newcommand{\yy}{\ \wedge\ } % y
+\newcommand{\union}{\cup} % Union
+\newcommand{\inter}{\cap} % Interseccion
+\newcommand{\ol}[1]{\overline{ #1 }} % Cerradura
+
+\newcommand{\funcion}[3] {#1: #2 \rightarrow #3}
+\newcommand{\talque}{\text{ tal que }}
+
+\newenvironment{demostracion}{%
+    \begin{minipage}[t]{0.120\linewidth}
+    \textsc{Solución.}
+    \end{minipage}
+    \begin{minipage}[t]{0.825\linewidth}
+        }
+        {
+     \end{minipage}
+    }
+    
+\begin{document}
+
+\begin{tabular}{llr}
+    \multirow{3}{*}{\includegraphics[scale=0.18]{utfsm.png}} & \textsc{Universidad Técnica Federico Santa María} & \hspace{20mm} \multirow{2}{*}{\Large \textsc{MAT-XXX}}\\
+    &  \textsc{Departamento de Matemática} \\
+    &  \textsc{Ingeniería Civil Matemática}\\
+    & \\
+\end{tabular}
+\vspace{0.1em}
+\begin{center}
+    \huge{\textsc{Nombre del Ramo\\Tarea X}}
+\end{center}
+
+\vspace{1em}
+
+\begin{tabular}{llcll}
+    \textsc{Nombre} & Bruno Martinez Barrera & \hspace{30mm} & \textsc{Rol} & 2016 10 007 - 5\\
+    \textsc{Profesor} &  & \hspace{30mm} & \textsc{Fecha} & \today\\
+    \textsc{Ayudante} & \\
+\end{tabular}
+
+\section*{Pregunta 1}
+    \subfile{1/1.tex}
+\newpage
+
+\section*{Pregunta 2}
+    \subfile{2/2.tex}
+\newpage
+
+\section*{Pregunta 3}
+    \subfile{3/3.tex}
+\newpage
+
+\end{document}
