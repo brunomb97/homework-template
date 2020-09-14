@@ -1,30 +1,38 @@
 \documentclass[../template.tex]{subfiles}
 \begin{document}
     \begin{enunciado}
-    Una funcion $\funcion{f}{X}{\ol{\real}}$ es medible si y solo si, los conjuntos
-        \begin{align}
-            A := \llave{x \in X : f(x) = + \infty} \text{ y } B := \llave{x \in X : f(x) = - \infty}
-        \end{align}
-    pertenecen a $\mathcal{A}$ y la función con valores reales dada por
-        \begin{align}
-            \tilde{f}(x) = \begin{funcionporpartes}{ll}
-                                f(x) & \text{ si } x \not\in A \union B,\\
-                                0 & \text{ si } x \in A \union B,
-                           \end{funcionporpartes}
-        \end{align}
-    es medible.
+        Una función $\funcion{f}{X}{\ol{\rr}}$ es medible si y solo si, los conjuntos
+            \begin{align*}
+                A := \llave{x \in X : f(x) = + \infty} \text{ y } B := \llave{x \in X : f(x) = -\infty}
+            \end{align*}
+        pertenecen a $\algebra$ y la función con valores reales dada por
+            \begin{align*}
+                \tilde{f}(x) = \begin{funcionporpartes}{ll}
+                                    f(x) & \si x \not\in A \union B,\\
+                                    0 & \si x \in A \union B,
+                               \end{funcionporpartes}
+            \end{align*}
+        es medible.
     \end{enunciado}
-
+    
     \begin{demostracion}
-        Se tiene
-            \begin{align}
-                a = 0
-            \end{align}
-        de esta forma
-            \begin{align}
-                b = 0
-            \end{align}
-
+        \demder
+        Sea $f \in \medible{X}{\algebra}$. Observe que
+            \begin{align*}
+                A &= \llave{x \in X : f(x) = + \infty} = \biginter_{n=1}^{\infty} \llave{x \in X : f(x) > n},\\
+                B &= \llave{x \in X : f(x) = - \infty} = \cuadro{ \bigunion_{n=1}^{\infty} \llave{x \in X: f(x) > -n} }^c
+            \end{align*}
+        de esta forma, $A,B \in \algebra$. Ahora, se probará que $\tilde{f}$ es medible. Para $\alpha \in \rr$, se tendrá
+            \begin{align*}
+                \llave{x \in X : \tilde{f}(x) > \alpha} = \begin{funcionporpartes}{ll}
+                                                            \llave{x : f(x) > \alpha} \backslash A & \si \alpha \geq 0,\\
+                                                            \llave{x : f(x) > \alpha} \union B & \si \alpha < 0.
+                                                          \end{funcionporpartes}
+            \end{align*}
+        Así, concluimos que $\tilde{f}$ es medible.
+        
+        \demizq
+        
     \end{demostracion}
 
 \end{document}
