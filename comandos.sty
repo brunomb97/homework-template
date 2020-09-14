@@ -1,0 +1,74 @@
+% Comandos 
+\ProvidesPackage{comandos}
+
+\newcommand{\rr}{\mathbb{R}} % Números Reales
+\newcommand{\cc}{\mathbb{C}} % Números Complejos
+\newcommand{\nn}{\mathbb{N}} % Números Naturales
+\newcommand{\qq}{\mathbb{Q}} % Números Racional
+\newcommand{\lineal}[2]{\mathcal{L} \left( #1,#2 \right) } % Espacio de las lineales
+\newcommand{\medible}[2]{\textit{M} \left( #1, #2 \right)} % Espacios medibles
+\newcommand{\espacio}[2]{\left( #1, #2 \right)} % Espacios en general
+\newcommand{\algebra}{\mathcal{A}} % Álgebra
+\newcommand{\hiperplano}{\mathcal{H}}
+\newcommand{\funcion}[3] {#1: #2 \rightarrow #3}
+
+\newcommand{\interno}[1] {\left\langle #1 \right\rangle} % Producto Interno
+\newcommand{\norma}[2][] {\left\Vert #2 \right\Vert_{#1}} % Norma
+\newcommand{\abs}[1] {\left\vert #1 \right\vert} % Absoluto
+
+\newcommand{\pare}[1] {\left( #1 \right)} % Paréntesis
+\newcommand{\llave}[1] {\left\lbrace #1 \right\rbrace} % Llaves curvas
+\newcommand{\cuadro}[1] {\left[ #1 \right]} % Llaves cuadradas
+
+\newcommand{\ds}{\displaystyle} % Displaystyle
+\newcommand{\ssi}{\ \Leftrightarrow\ } % Sí y solo sí
+\newcommand{\implica}{\ \Rightarrow\ } % Implicancia
+\newcommand{\tiende}{\rightarrow} % Tiende a
+\newcommand{\oo}{\ \vee\ } % ó
+\newcommand{\yy}{\ \wedge\ } % y
+\newcommand{\union}{\cup} % Union
+\newcommand{\inter}{\cap} % Interseccion
+\newcommand{\bigunion}{\bigcup} % Union
+\newcommand{\biginter}{\bigcap} % Interseccion
+\newcommand{\eps}{\varepsilon} % Epsilon
+\newcommand{\ol}[1]{\overline{ #1 }} % Cerradura
+\newcommand{\val}[1]{\text{val} \left( #1 \right)}
+
+\newcommand{\talque}{\text{ tal que }}
+\newcommand{\si}{\text{ si }}
+
+\newenvironment{funcionporpartes}[1]{
+    \left\{
+    \begin{array}{#1}
+        }
+        {
+    \end{array}
+    \right.
+    }
+    
+\newenvironment{enunciado}{
+    \begin{minipage}{\linewidth}
+        \itshape}
+        {
+     \end{minipage}
+    }
+    
+\newenvironment{demostracion}{
+    \begin{minipage}[t]{0.060\linewidth}
+    \textsc{Dem.}
+    \end{minipage}
+    \begin{minipage}[t]{0.940\linewidth}
+        }
+        {
+     \end{minipage}
+    }
+    
+\newenvironment{seccion}[2]{
+    \begin{minipage}[t]{0.050\linewidth}
+        $\left( #2 \right)$
+    \end{minipage}
+    \begin{minipage}[t]{#1}
+        }
+        {
+     \end{minipage}
+    }
