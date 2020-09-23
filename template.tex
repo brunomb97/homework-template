@@ -1,18 +1,18 @@
 \documentclass[letterpaper,12pt]{article}
 \usepackage[utf8]{inputenc}
 
-\topmargin = 1.5cm                      
-\headheight = 0.5cm                     
-\headsep = 0.5cm                        
-\footskip = 0.8cm                      
+\topmargin = -23pt                      
+\headheight = 0pt                     
+\headsep = 25pt                        
+\footskip = 0pt                   
 \setlength{\parindent}{.6cm}           
 \linespread{1.04}                        
-\textwidth = 16.2cm                     
-\textheight = 22.5cm                    
-\hoffset = -3.2cm                      
-\voffset = -2.54cm                     
-\evensidemargin = 3cm                 
-\oddsidemargin = 3.0cm              
+\textwidth = 480pt                   
+\textheight = 660pt                   
+\hoffset = 0pt                  
+\voffset = 0pt                 
+\evensidemargin = 0pt                  
+\oddsidemargin = 0pt                    
 
 \usepackage{parskip}
 
@@ -27,6 +27,7 @@
 \usepackage{array}
 \usepackage{enumitem}
 \usepackage{multirow}
+\usepackage{float}
 
 \usepackage{amsmath}
 \usepackage{mathrsfs}
@@ -40,6 +41,16 @@
 \usepackage{dsfont}
 \usepackage[framemethod=TikZ]{mdframed}
 
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\lhead{}
+\chead{}
+\rhead{\thepage}
+\renewcommand{\headrulewidth}{0pt}
+\lfoot{}
+\cfoot{}
+\rfoot{}
+
 % Comandos personalizados
 \usepackage{comandos}
 
@@ -49,6 +60,7 @@
 \author{ Anonymous }
 
 \begin{document}
+\thispagestyle{empty}
 {\small
 \begin{tabular}{llr}
     \multirow{4}{*}{\includegraphics[scale=0.12]{utfsm.pdf}} & \textsc{Universidad Técnica Federico Santa María} & \hspace{3em} \multirow{3}{*} {\large \textsc{MATXXX}} \\
@@ -66,7 +78,7 @@
 
 \begin{tabular}{llll}
     \textsc{Nombre} &  & \textsc{Rol} & \\
-    \textsc{Profesor} &  & \textsc{Fecha} & \\
+    \textsc{Profesor} &  & \textsc{Fecha} & \today\\
     \textsc{Ayudante} &  & \textsc{Correo} &
 \end{tabular}
 
