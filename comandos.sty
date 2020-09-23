@@ -47,21 +47,14 @@
     }
     
 \newenvironment{enunciado}{
-    \begin{minipage}{\linewidth}
-        \itshape}
+    \begin{mdframed}[roundcorner=10pt]
+        }
         {
-     \end{minipage}
+     \end{mdframed}
     }
     
 \newenvironment{demostracion}{
-    \begin{minipage}[t]{0.060\linewidth}
-    \textsc{Dem.}
-    \end{minipage}
-    \begin{minipage}[t]{0.940\linewidth}
-        }
-        {
-     \end{minipage}
-    }
+    \textsc{Solución.}}{}
     
 \newenvironment{seccion}[2]{
     \begin{minipage}[t]{0.050\linewidth}

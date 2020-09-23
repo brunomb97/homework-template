@@ -1,4 +1,4 @@
-\documentclass[a4paper,10pt]{article}
+\documentclass[letterpaper,12pt]{article}
 \usepackage[utf8]{inputenc}
 
 \topmargin = 1.5cm                      
@@ -8,7 +8,7 @@
 \setlength{\parindent}{.6cm}           
 \linespread{1.04}                        
 \textwidth = 16.2cm                     
-\textheight = 23.5cm                    
+\textheight = 22.5cm                    
 \hoffset = -3.2cm                      
 \voffset = -2.54cm                     
 \evensidemargin = 3cm                 
@@ -38,48 +38,51 @@
 \usepackage{amstext}
 \usepackage{latexsym}
 \usepackage{dsfont}
+\usepackage[framemethod=TikZ]{mdframed}
 
 % Comandos personalizados
-
 \usepackage{comandos}
 
 % Titulo / Autor
 
-
 \title{Tarea X - MATXXX Nombre del Ramo}
-\author{test}
+\author{ Anonymous }
 
 \begin{document}
-
+{\small
 \begin{tabular}{llr}
-    \multirow{3}{*}{\includegraphics[scale=0.18]{utfsm.png}} & \textsc{Universidad Técnica Federico Santa María} & \hspace{20mm} \multirow{2}{*}{\Large \textsc{MATXXX}}\\
+    \multirow{4}{*}{\includegraphics[scale=0.12]{utfsm.pdf}} & \textsc{Universidad Técnica Federico Santa María} & \hspace{3em} \multirow{3}{*} {\large \textsc{MATXXX}} \\
     &  \textsc{Departamento de Matemática} \\
-    &  \textsc{Ingeniería Civil Matemática}\\
-    & \\
+    &  \textsc{Ingeniería Civil Matemática} \\
+    &
 \end{tabular}
-\vspace{0.1em}
+}
+
 \begin{center}
     \huge{\textsc{Nombre del Ramo\\Tarea X}}
 \end{center}
 
 \vspace{1em}
 
-\begin{tabular}{llcll}
-    \textsc{Nombre} &  & \hspace{30mm} & \textsc{Rol} & \\
-    \textsc{Profesor} &  & \hspace{30mm} & \textsc{Fecha} & \today\\
-    \textsc{Ayudante} & \\
+\begin{tabular}{llll}
+    \textsc{Nombre} &  & \textsc{Rol} & \\
+    \textsc{Profesor} &  & \textsc{Fecha} & \\
+    \textsc{Ayudante} &  & \textsc{Correo} &
 \end{tabular}
 
-\section*{Pregunta 1}
+\section*{Problema 1}
+\vspace{0.8em}
     \subfile{1/1.tex}
-\newpage
+\clearpage
 
-\section*{Pregunta 2}
+\section*{Problema 2}
+\vspace{0.8em}
     \subfile{2/2.tex}
-\newpage
+\clearpage
 
-\section*{Pregunta 3}
+\section*{Problema 3}
+\vspace{0.8em}
     \subfile{3/3.tex}
-\newpage
+\clearpage
 
 \end{document}
