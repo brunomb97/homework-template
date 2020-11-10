@@ -1,8 +1,6 @@
 % Comandos 
 \ProvidesPackage{custom}
 
-\usepackage{bbm}
-
 \newcommand{\R}{\mathbb{R}} % Números Reales
 \newcommand{\C}{\mathbb{C}} % Números Complejos
 \newcommand{\N}{\mathbb{N}} % Números Naturales
@@ -79,12 +77,12 @@
 \newenvironment{demostracion}{
     \textsc{Solución.}}{}
     
-\newenvironment{seccion}[2]{
-    \begin{minipage}[t]{0.050\linewidth}
-        $\left( #2 \right)$
-    \end{minipage}
-    \begin{minipage}[t]{#1}
+\newlength{\myl}
+\newenvironment{seccion}[1]{
+    \settowidth{\myl}{( #1 )\ \ }
+    \begin{hangparas}{\the\myl}{1}
+        ( #1 )
         }
         {
-     \end{minipage}
+    \end{hangparas}
     }
