@@ -52,35 +52,48 @@
 \rfoot{}
 
 % Comandos personalizados
-\usepackage{comandos}
+\usepackage{custom}
 
 % Titulo / Autor
+\newcommand{\Titulo}{
+    Tarea X
+}
+\newcommand{\Nombre}{
+    Bruno Martinez Barrera
+}
+\newcommand{\Ramo}{
+    Nombre del Ramo
+}
+\newcommand{\Sigla}{
+    MATXXX
+}
+\newcommand{\Profesor}{
+    Profesor
+}
+\newcommand{\Ayudante}{
+    Ayudante
+}
+\newcommand{\Rol}{
+    2016 10 007 - 5
+}
+\newcommand{\Correo}{
+    bruno.martinez@sansano.usm.cl
+}
 
-\title{Tarea X - MATXXX Nombre del Ramo}
-\author{ Anonymous }
+\title{\Titulo - \Sigla \Ramo}
+\author{\Name}
 
 \begin{document}
 \thispagestyle{empty}
-{\small
-\begin{tabular}{llr}
-    \multirow{4}{*}{\includegraphics[scale=0.12]{utfsm.pdf}} & \textsc{Universidad Técnica Federico Santa María} & \hspace{3em} \multirow{3}{*} {\large \textsc{MATXXX}} \\
-    &  \textsc{Departamento de Matemática} \\
-    &  \textsc{Ingeniería Civil Matemática} \\
-    &
-\end{tabular}
-}
+\subfile{header.tex}
 
 \begin{center}
-    \huge{\textsc{Nombre del Ramo\\Tarea X}}
+    \huge{\textsc{\Ramo\\ \Titulo}}
 \end{center}
 
 \vspace{1em}
 
-\begin{tabular}{llll}
-    \textsc{Nombre} &  & \textsc{Rol} & \\
-    \textsc{Profesor} &  & \textsc{Fecha} & \today\\
-    \textsc{Ayudante} &  & \textsc{Correo} &
-\end{tabular}
+\subfile{names.tex}
 
 \section*{Problema 1}
 \vspace{0.8em}
