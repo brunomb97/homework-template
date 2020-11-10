@@ -3,42 +3,53 @@
 
 \usepackage{bbm}
 
-\newcommand{\rr}{\mathbb{R}} % Números Reales
-\newcommand{\cc}{\mathbb{C}} % Números Complejos
-\newcommand{\nn}{\mathbb{N}} % Números Naturales
-\newcommand{\qq}{\mathbb{Q}} % Números Racional
-\newcommand{\uno}{\mathbbm{1}} % Función uno
-\newcommand{\lineal}[2]{\mathcal{L} \left( #1,#2 \right) } % Espacio de las lineales
-\newcommand{\medible}[2]{\textit{M} \left( #1, #2 \right)} % Espacios medibles
-\newcommand{\espacio}[2]{\left( #1, #2 \right)} % Espacios en general
-\newcommand{\algebra}{\mathcal{A}} % Álgebra
-\newcommand{\hiperplano}{\mathcal{H}}
-\newcommand{\funcion}[3] {#1: #2 \rightarrow #3}
+\newcommand{\R}{\mathbb{R}} % Números Reales
+\newcommand{\C}{\mathbb{C}} % Números Complejos
+\newcommand{\N}{\mathbb{N}} % Números Naturales
+\newcommand{\Q}{\mathbb{Q}} % Números Racional
+\newcommand{\1}{\mathbbm{1}} % Función uno
+\newcommand{\D}{\mathrm{d}} % Derivada
+\newcommand{\F}[3] {#1: #2 \rightarrow #3} % Definición de función
+\newcommand{\EF}[2] {#1\left( #2 \right)} % Evaluación de función
+\newcommand{\A}{\mathcal{A}} % Álgebra
+\newcommand{\LL}{\mathcal{L}} % Espacio L^p
+\newcommand{\hiperplano}{\mathcal{H}} % Hiperplano
 
-\newcommand{\interno}[1] {\left\langle #1 \right\rangle} % Producto Interno
-\newcommand{\norma}[2][] {\left\Vert #2 \right\Vert_{#1}} % Norma
-\newcommand{\abs}[1] {\left\vert #1 \right\vert} % Absoluto
+\newcommand{\SUC}[3][\mathbb{N}] {\left\lbrace #2_{#3} \right\rbrace_{#3 \in #1}} % Definir sucesión
+\newcommand{\SUBSUC}[4][\mathbb{N}] {\left\lbrace #2_{#3_{#4}} \right\rbrace_{#4 \in #1}} % Definir subsucesión
 
 \newcommand{\pare}[1] {\left( #1 \right)} % Paréntesis
 \newcommand{\llave}[1] {\left\lbrace #1 \right\rbrace} % Llaves curvas
 \newcommand{\cuadro}[1] {\left[ #1 \right]} % Llaves cuadradas
 
+\newcommand{\espacio}[2]{\left( #1, #2 \right)} % Espacios en general
+\newcommand{\espaciotres}[3]{\left( #1, #2, #3 \right)} % Espacios en general 3
+\newcommand{\lineal}[2]{\mathcal{L} \left( #1,#2 \right) } % Espacio de las lineales
+\newcommand{\continua}[2]{\mathcal{C} \left( #1,#2 \right) } % Espacio de las continuas
+\newcommand{\medible}[2]{\textit{M} \left( #1, #2 \right)} % Espacios medibles
+
+\newcommand{\interno}[3][] {\left\langle #2 , #3 \right\rangle_{#1}} % Producto Interno
+\newcommand{\norma}[2][] {\left\Vert #2 \right\Vert_{#1}} % Norma
+\newcommand{\abs}[1] {\left\vert #1 \right\vert} % Absoluto
+
+\newcommand{\OO}{\ \vee\ } % ó
+\newcommand{\YY}{\ \wedge\ } % y
 \newcommand{\ds}{\displaystyle} % Displaystyle
 \newcommand{\ssi}{\ \Leftrightarrow\ } % Sí y solo sí
 \newcommand{\implica}{\ \Rightarrow\ } % Implicancia
 \newcommand{\tiende}{\rightarrow} % Tiende a
-\newcommand{\oo}{\ \vee\ } % ó
-\newcommand{\yy}{\ \wedge\ } % y
+\newcommand{\wtiende}{\rightharpoonup} % Tiende débil
 \newcommand{\union}{\cup} % Union
 \newcommand{\inter}{\cap} % Interseccion
 \newcommand{\bigunion}{\bigcup} % Union
 \newcommand{\biginter}{\bigcap} % Interseccion
 \newcommand{\eps}{\varepsilon} % Epsilon
 \newcommand{\ol}[1]{\overline{ #1 }} % Cerradura
-\newcommand{\val}[1]{\text{val} \left( #1 \right)}
+\newcommand{\val}[1]{\text{val} \left( #1 \right)} % val
+\newcommand{\sol}[1]{\text{sol} \left( #1 \right)} % sol
 
-\newcommand{\talque}{\text{ tal que }}
-\newcommand{\si}{\text{ si }}
+\newcommand{\talque}{\text{ tal que }} % Tal que
+\newcommand{\si}{\text{ si }} % Si
 
 \newenvironment{funcionporpartes}[1]{
     \left\{
