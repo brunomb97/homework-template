@@ -1,35 +1,34 @@
 \documentclass[../main.tex]{subfiles}
 \begin{document}
     \begin{enunciado}
-        Una función $\F f X {\ol \R}$ es medible si y solo si, los conjuntos
+        Una función $\F f X \Rext$ es medible si y solo si, los conjuntos
             \begin{align*}
                 A := \llave{x \in X : \f f x = + \infty} \text{ y } B := \llave{x \in X : \f f x = -\infty}
             \end{align*}
         pertenecen a $\A$ y la función con valores reales dada por
             \begin{align*}
-                \f {\tilde{f}} x = \begin{funcionporpartes}{ll}
-                                    \f f x & \si x \not\in A \union B,\\
-                                    0 & \si x \in A \union B,
+                \f {\tilde f} x = \begin{funcionporpartes}{ll}
+                                    \f f x & \si x \not\in A \uu B,\\
+                                    0 & \si x \in A \uu B,
                                \end{funcionporpartes}
             \end{align*}
         es medible.
     \end{enunciado}
     
     \begin{demostracion}
-        Sea $f \in \medible X A$. Observe que
+        Sea $f \in \E[\M] X \A$. Observe que
             \begin{align*}
-                A &= \llave{x \in X : \f f x = + \infty} = \biginter_{n=1}^{\infty} \llave{x \in X : \f f x > n},\\
-                B &= \llave{x \in X : \f f x = - \infty} = \cuadro{ \bigunion_{n=1}^{\infty} \llave{x \in X: \f f x > -n} }^c
+                A &= \llave{x \in X : \f f x = + \infty} = \Ii n 1 \infty \llave{x \in X : \f f x > n},\\
+                B &= \llave{x \in X : \f f x = - \infty} = \cuadro{ \Ui n 1 \infty \llave{x \in X: \f f x > -n} }^c
             \end{align*}
-        de esta forma, $A,B \in \A$. Ahora, se probará que $\tilde{f}$ es medible. Para $\alpha \in \R$, se tendrá que
+        de esta forma, $A,B \in \A$. Ahora, se probará que $\tilde f$ es medible. Para $\alpha \in \R$, se tendrá que
             \begin{align*}
-                \llave{x \in X : \tilde{f}(x) > \alpha} = \begin{funcionporpartes}{ll}
-                                                            \llave{x : \f f x > \alpha} \backslash A & \si \alpha \geq 0,\\
-                                                            \llave{x : \f f x > \alpha} \union B & \si \alpha < 0.
+                \llave{x \in X : \f {\tilde f} x > \alpha} = \begin{funcionporpartes}{ll}
+                                                            \llave{x : \f f x > \alpha} \setminus A & \si \alpha \geq 0,\\
+                                                            \llave{x : \f f x > \alpha} \uu B & \si \alpha < 0.
                                                           \end{funcionporpartes}
             \end{align*}
-        Así, concluimos que $\tilde{f}$ es medible.
-        
+        Así, concluimos que es medible.
     \end{demostracion}
 
 \end{document}

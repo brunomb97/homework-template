@@ -1,72 +1,9 @@
 \documentclass[../main.tex]{subfiles}
 \begin{document}
     \begin{enunciado}
-        Considere la sucesión $\displaystyle p_0(t) = 1 + t,\ p_{k+1}(t) = 1 + \int_{0}^{t} p_k(s)ds$.
-        
-        \begin{enumerate}
-            \item Demuestre que $p_k(t)$ converge uniformemente en cada intervalo compacto de $\R$ cuando $k \tiende \infty$ y calcule $\ds \varphi(t) = \lim_{k \tiende \infty} p_k(t)$.
-            \item Determine el problema de Cauchy que satisface $\varphi(t)$.
-        \end{enumerate}
+       test
     \end{enunciado}
     \begin{demostracion}
-        En primer lugar, se probará que
-        \begin{align}
-            p_k(t) = \sum_{i=0}^{k+1} \frac{t^i}{i!}, \quad \forall\ k \in \N_0
-        \end{align}
-        Se procederá por inducción,
-        \begin{enumerate}
-            \item Para $k = 0$, se tiene
-                \begin{align*}
-                    p_0(t) = 1 + t = \frac{t^0}{0!} + \frac{t^1}{1!} = \sum_{i=0}^{1} \frac{t^i}{i!}.
-                \end{align*}
-            \item Suponga que (1) se tiene para $k \in \N$. Se probará que la igualdad también se tiene para $k+1$. Observe que
-                \begin{align*}
-                    p_{k+1}(t) = 1 + \int_{0}^{t} p_{k} (s) ds & = 1 + \int_{0}^{t} \pare{\sum_{i=0}^{k+1} \frac{s^i}{i!}} ds \quad \text{(por hipótesis de inducción)}\\
-                    & = 1 + \sum_{i=0}^{k+1} \int_{0}^{t} \pare{\frac{s^i}{i!}} ds \quad \text{(por linealidad de la integral)}\\
-                    &= 1 + \sum_{i=0}^{k+1} \frac{t^{(i+1)}}{i!(i+1)}\\
-                    &= \frac{t^0}{0!} + \frac{t^1}{1!} + \frac{t^{2}}{2!} + ... + \frac{t^{k+2}}{(k+2)!}\\
-                    &= \sum_{i=0}^{k+2} \frac{t^i}{i!}.
-                \end{align*}
-        \end{enumerate}
-        De esta forma, $\ds p_k(t) = \sum_{i=0}^{k+1} \frac{t^i}{i!}, \ \forall\ k \in \N_0$. Se probará ahora que $p_k(t)$ converge uniformemente en cada intervalo compacto de $\R$. 
-        
-        Sea $\eps > 0$ e $I$ un intervalo compacto de $\R$. En particular, $I$ es acotado pues $\R$ es de dimensión finita, es decir, $\abs{t} \leq M$ para todo $t \in I$. En primer lugar, observe que
-            \begin{align}
-                \frac{M}{2M + k} < \frac{M}{2M} = \frac{1}{2},\quad \forall\ k \in \N
-            \end{align}
-        Además,
-            \begin{align*}
-                1 = \sum_{i = 1}^{\infty} \pare{\frac{1}{2}}^{i} = \sum_{i = 1}^{n} \pare{\frac{1}{2}}^{i} + \sum_{i = n+1}^{\infty} \pare{\frac{1}{2}}^{i} = 1 - \pare{\frac{1}{2}}^{n} + \sum_{i = n+1}^{\infty} \pare{\frac{1}{2}}^{i}\\
-            \end{align*}
-            \vspace{-4em}
-            \begin{align}
-                \implica \sum_{i = n+1}^{\infty} \pare{\frac{1}{2}}^{i} = \pare{\frac{1}{2}}^{n}
-            \end{align}
-        Luego, defina $k_0 \in \N$ tal que $\ds k_0 \geq \max \llave{2M, \log_2 \pare{ \frac{1}{\eps} \frac{(2M)^{2M}}{2M!}}}$. De esta forma, para $k \geq k_0$, y $t \in I$.
-            \begin{align*}
-                \abs{ \sum_{i=0}^{\infty} \frac{t^i}{i!} - p_k(t)} &=
-                \abs{\sum_{i=0}^{\infty} \frac{t^i}{i!} - \sum_{i=0}^{k} \frac{t^i}{i!}}\\
-                &= \abs{\sum_{i=k+1}^{\infty} \frac{t^i}{i!}}\\
-                &\leq \sum_{i=k+1}^{\infty} \frac{\abs{t}^i}{i!} \quad \text{(por desigualdad triangular)}\\
-                &\leq \sum_{i=k+1}^{\infty} \frac{M^i}{i!}\\
-                &\leq \sum_{i=k+1}^{\infty} \frac{M^{2M}}{(2M)!} \pare{ \frac{M}{2M+1} \cdot \frac{M}{2M+1} \cdot \dots \cdot \frac{M}{i-1} \cdot \frac{M}{i}} \text{(pues $k > 2M$)} \\
-                &< \frac{M^{2M}}{(2M)!} \sum_{i=k+1}^{\infty} \pare{ \frac{1}{2} }^{i-2M} \quad \text{(por (2))}\\
-                &< \frac{(2M)^{2M}}{(2M)!} \pare{\frac{1}{2}}^{k} \quad \text{(por (3))}\\
-                &< \frac{(2M)^{2M}}{(2M)!} \pare{\frac{1}{2}}^{k_0}\\
-                &< \frac{(2M)^{2M}}{(2M)!} \frac{(2M)!}{(2M)^{2M}} \eps\\
-                &< \eps.
-            \end{align*}
-        Se ha probado que $p_k(t)$ converge uniformemente a $\ds \sum_{i=0}^{\infty} \frac{t^i}{i!}$. Podemos ver que esta serie converge, por definición, a la función exponencial $e^t$. Por tanto,
-            \begin{align*}
-                \varphi(t) = \lim_{k \tiende a \infty} p_k(t) =  \sum_{i=0}^{\infty} \frac{t^i}{i!} = e^t.
-            \end{align*}
-        Observe que $\varphi '(t) = \varphi(t) = e^t$ y $\varphi (0) = e^0 = 1$, por tanto, el problema de Cauchy que satisface $\varphi$ estará dado por
-            \begin{align*}
-                \begin{funcionporpartes}{rcl}
-                    \dot{x} & = & x(t)\\
-                    x(0) & = & 1.
-                \end{funcionporpartes}
-            \end{align*}
-            
+        test
     \end{demostracion}
 \end{document}
