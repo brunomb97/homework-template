@@ -22,11 +22,11 @@
 \newcommand{\EIII}[4][] {#1\left( #2 , #3 , #4 \right)} % Espacios 3
 
 \newcommand{\F}[3] {#1: #2 \rightarrow #3} % Definición de función
+\newcommand{\MF}[3] {#1: #2 \rightrightarrows #3} % Definición de multifunción
 \newcommand{\f}[2] {#1\left( #2 \right)} % Evaluación de función
 \newcommand{\SUC}[3][\mathbb{N}] {\left\lbrace #2_{#3} \right\rbrace_{#3 \in #1}} % Definir sucesión
 \newcommand{\SUBSUC}[4][\mathbb{N}] {\left\lbrace #2_{#3_{#4}} \right\rbrace_{#4 \in #1}} % Definir subsucesión
-\newcommand{\df}[2][0] {#2^{\left( #1 \right)}} % Función derivada #1 veces
-\newcommand{\fracd}[2] {\frac{\text{d} #1}{\text{d} #2}} % Derivada de #2 respecto a #1
+\newcommand{\fracd}[3][] {\frac{\text{d}^{#1} #2}{\text{d} #3^{#1}}} % Derivada de #2 respecto a #1
 \NewDocumentCommand{\INT}{O{}O{}mm} {\int_{#1}^{#2} #3 \text{d} #4} % Integral
 \newcommand{\SUM}[3] {\sum_{#1 = #2}^{#3}}
 \newcommand{\PROD}[3] {\sum_{#1 = #2}^{#3}}
