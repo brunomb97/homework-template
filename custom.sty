@@ -26,6 +26,7 @@
 \newcommand{\f}[2] {#1\left( #2 \right)} % Evaluación de función
 \newcommand{\SUC}[3][\mathbb{N}] {\left\lbrace #2_{#3} \right\rbrace_{#3 \in #1}} % Definir sucesión
 \newcommand{\SUBSUC}[4][\mathbb{N}] {\left\lbrace #2_{#3_{#4}} \right\rbrace_{#4 \in #1}} % Definir subsucesión
+\newcommand{\df}[2][0] {#2^{\left( #1 \right)}} % Función derivada #1 veces
 \newcommand{\fracd}[3][] {\frac{\text{d}^{#1} #2}{\text{d} #3^{#1}}} % Derivada de #2 respecto a #1
 \NewDocumentCommand{\INT}{O{}O{}mm} {\int_{#1}^{#2} #3 \text{d} #4} % Integral
 \newcommand{\SUM}[3] {\sum_{#1 = #2}^{#3}}
@@ -62,6 +63,7 @@
 \newcommand{\sol}[1] {\text{sol} \left( #1 \right)} % sol
 \newcommand{\dom}[1] {\text{dom} \left( #1 \right)} % dom
 \newcommand{\cl}[1] {\text{cl} \left( #1 \right)} % cl
+\newcommand{\dist}[3][] {\text{dist}_{#1} \left( #2, #3 \right)} % dist
 
 \newcommand{\talque} {\text{ tal que }} % Tal que
 \newcommand{\si} {\text{ si }} % Si
