@@ -31,6 +31,7 @@
 \NewDocumentCommand{\INT}{O{}O{}mm} {\int_{#1}^{#2} #3 \text{d} #4} % Integral
 \newcommand{\SUM}[3] {\sum_{#1 = #2}^{#3}}
 \newcommand{\PROD}[3] {\sum_{#1 = #2}^{#3}}
+\newcommand{\bola}[2][] {\mathbb{B}_{#1} \left( #2 \right)}
 
 \newcommand{\pare}[1] {\left( #1 \right)} % Paréntesis
 \newcommand{\llave}[1] {\left\lbrace #1 \right\rbrace} % Llaves curvas
@@ -64,9 +65,16 @@
 \newcommand{\dom}[1] {\text{dom} \left( #1 \right)} % dom
 \newcommand{\cl}[1] {\text{cl} \left( #1 \right)} % cl
 \newcommand{\dist}[3][] {\text{dist}_{#1} \left( #2, #3 \right)} % dist
+\newcommand{\proy}[3][] {\text{proy}_{#1} \left( #2, #3 \right)} % proy
+\newcommand{\prox}[2] {\text{prox}_{#1} \left( #2 \right)} % prox
+\newcommand{\interior}[1] {\text{int} \left( #1 \right)} % int
+\newcommand{\subdiff}[3][] {\partial^{#1} #2 \left( #3 \right)} % Subdiferencial
+\newcommand{\cononormal}[3][] {N_{#2}^{#1} \left( #3 \right)} % N
+\newcommand{\conotangente}[3][] {T_{#2}^{#1} \left( #3 \right)} % T
 
 \newcommand{\talque} {\text{ tal que }} % Tal que
 \newcommand{\si} {\text{ si }} % Si
+\newcommand{\ctp} {\text{ c.t.p. }} % Si
 
 \newenvironment{funcionporpartes}[1]{
     \left\{
