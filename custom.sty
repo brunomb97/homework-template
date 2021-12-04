@@ -2,6 +2,20 @@
 \ProvidesPackage{custom}
 \RequirePackage{xparse}
 
+\newtheorem{teorema}{Teorema}[section]
+\newtheorem{definicion}{Definici\'on}[section]
+\newtheorem{observacion}{Observaci\'on}[section]
+\newtheorem{corolario}{Corolario}[section]
+\newtheorem{proposicion}{Proposici\'on}[section]
+\newtheorem{lema}{Lema}[section]
+
+\newtheorem*{teorema*}{Teorema}
+\newtheorem*{definicion*}{Definici\'on}
+\newtheorem*{observacion*}{Observaci\'on}
+\newtheorem*{corolario*}{Corolario}
+\newtheorem*{proposicion*}{Proposici\'on}
+\newtheorem*{lema*}{Lema}
+
 \newcommand{\R} {\mathbb{R}} % Números Reales
 \newcommand{\C} {\mathbb{C}} % Números Complejos
 \newcommand{\N} {\mathbb{N}} % Números Naturales
@@ -65,12 +79,15 @@
 \newcommand{\dom}[1] {\text{dom} \left( #1 \right)} % dom
 \newcommand{\cl}[1] {\text{cl} \left( #1 \right)} % cl
 \newcommand{\dist}[3][] {\text{dist}_{#1} \left( #2, #3 \right)} % dist
+\newcommand{\graph}[2][] {\text{gr}_{#1} \left( #2 \right)} % gr
 \newcommand{\proy}[3][] {\text{proy}_{#1} \left( #2, #3 \right)} % proy
 \newcommand{\prox}[2] {\text{prox}_{#1} \left( #2 \right)} % prox
 \newcommand{\interior}[1] {\text{int} \left( #1 \right)} % int
 \newcommand{\subdiff}[3][] {\partial^{#1} #2 \left( #3 \right)} % Subdiferencial
 \newcommand{\cononormal}[3][] {N_{#2}^{#1} \left( #3 \right)} % N
 \newcommand{\conotangente}[3][] {T_{#2}^{#1} \left( #3 \right)} % T
+\newcommand{\conjalcanzable}[3] {\mathcal{A}_{#2}^{#1} \left( #3 \right)} % Conjunto alcanzable
+\newcommand{\conjsolucion}[3][] {\mathcal{S}_{#1}^{#2} \left( #3 \right)} % Conjunto solución
 
 \newcommand{\talque} {\text{ tal que }} % Tal que
 \newcommand{\si} {\text{ si }} % Si

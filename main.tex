@@ -37,6 +37,7 @@
 \usepackage[brazil,spanish]{babel}
 
 \usepackage{changepage}
+\usepackage{titlesec}
 \usepackage[usenames]{color}
 \usepackage{graphicx}
 \usepackage{graphics}
@@ -72,6 +73,9 @@
 \cfoot{}
 \rfoot{}
 
+\titleformat{\section}{\LARGE\bfseries}{}{0em}{}
+\numberwithin{equation}{section}
+
 % Comandos personalizados
 \usepackage{custom}
 
@@ -87,17 +91,17 @@
 
 \subfile{names.tex}
 
-\section*{Problema 1}
+\section{Problema 1}
 \vspace{0.8em}
     \subfile{1/1.tex}
 \clearpage
 
-\section*{Problema 2}
+\section{Problema 2}
 \vspace{0.8em}
     \subfile{2/2.tex}
 \clearpage
 
-\section*{Problema 3}
+\section{Problema 3}
 \vspace{0.8em}
     \subfile{3/3.tex}
 \clearpage
